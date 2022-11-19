@@ -22,26 +22,26 @@
       - [Best 5 Entropies](#best-5-entropies)
       - [Worst 5 Entropies](#worst-5-entropies)
       - [Images](#images)
-    - [Best entropy at k = 3](#best-entropy-at-k--3)
-    - [Best entropy at k = 5](#best-entropy-at-k--5)
-    - [Best entropy at k = 7](#best-entropy-at-k--7)
-    - [Best entropy at k = 9](#best-entropy-at-k--9)
-    - [Best entropy at k = 11](#best-entropy-at-k--11)
-    - [Best F-measure at k = 3](#best-f-measure-at-k--3)
-    - [Best F-measure at k = 5](#best-f-measure-at-k--5)
-    - [Best F-measure at k = 7](#best-f-measure-at-k--7)
-    - [Best F-measure at k = 9](#best-f-measure-at-k--9)
-    - [Best F-measure at k = 11](#best-f-measure-at-k--11)
-    - [Worst entropy at k = 3](#worst-entropy-at-k--3)
-    - [Worst entropy at k = 5](#worst-entropy-at-k--5)
-    - [Worst entropy at k = 7](#worst-entropy-at-k--7)
-    - [Worst entropy at k = 9](#worst-entropy-at-k--9)
-    - [Worst entropy at k = 11](#worst-entropy-at-k--11)
-    - [Worst F-measure at k = 3](#worst-f-measure-at-k--3)
-    - [Worst F-measure at k = 5](#worst-f-measure-at-k--5)
-    - [Worst F-measure at k = 7](#worst-f-measure-at-k--7)
-    - [Worst F-measure at k = 9](#worst-f-measure-at-k--9)
-    - [Worst F-measure at k = 11](#worst-f-measure-at-k--11)
+        - [Best Entropy at k = 3](#best-entropy-at-k--3)
+        - [Best Entropy at k = 5](#best-entropy-at-k--5)
+        - [Best Entropy at k = 7](#best-entropy-at-k--7)
+        - [Best Entropy at k = 9](#best-entropy-at-k--9)
+        - [Best Entropy at k = 11](#best-entropy-at-k--11)
+        - [Best F-measure at k = 3](#best-f-measure-at-k--3)
+        - [Best F-measure at k = 5](#best-f-measure-at-k--5)
+        - [Best F-measure at k = 7](#best-f-measure-at-k--7)
+        - [Best F-measure at k = 9](#best-f-measure-at-k--9)
+        - [Best F-measure at k = 11](#best-f-measure-at-k--11)
+        - [Worst Entropy at k = 3](#worst-entropy-at-k--3)
+        - [Worst Entropy at k = 5](#worst-entropy-at-k--5)
+        - [Worst Entropy at k = 7](#worst-entropy-at-k--7)
+        - [Worst Entropy at k = 9](#worst-entropy-at-k--9)
+        - [Worst Entropy at k = 11](#worst-entropy-at-k--11)
+        - [Worst F-measure at k = 3](#worst-f-measure-at-k--3)
+        - [Worst F-measure at k = 5](#worst-f-measure-at-k--5)
+        - [Worst F-measure at k = 7](#worst-f-measure-at-k--7)
+        - [Worst F-measure at k = 9](#worst-f-measure-at-k--9)
+        - [Worst F-measure at k = 11](#worst-f-measure-at-k--11)
 
 [![colab-badge][colab-badge]][colab-notebook]
 
@@ -524,121 +524,121 @@ The following are the average results for each number of clusters per image.
 
 #### Images
 
-### Best entropy at k = 3
+##### Best Entropy at k = 3
 
 ![png](img/output_57_0.png)
 
 ![png](img/output_58_0.png)
 
-### Best entropy at k = 5
+##### Best Entropy at k = 5
 
 ![png](img/output_60_0.png)
 
 ![png](img/output_61_0.png)
 
-### Best entropy at k = 7
+##### Best Entropy at k = 7
 
 ![png](img/output_63_0.png)
 
 ![png](img/output_64_0.png)
 
-### Best entropy at k = 9
+##### Best Entropy at k = 9
 
 ![png](img/output_66_0.png)
 
 ![png](img/output_67_0.png)
 
-### Best entropy at k = 11
+##### Best Entropy at k = 11
 
 ![png](img/output_69_0.png)
 
 ![png](img/output_70_0.png)
 
-### Best F-measure at k = 3
+##### Best F-measure at k = 3
 
 ![png](img/output_72_0.png)
 
 ![png](img/output_73_0.png)
 
-### Best F-measure at k = 5
+##### Best F-measure at k = 5
 
 ![png](img/output_75_0.png)
 
 ![png](img/output_76_0.png)
 
-### Best F-measure at k = 7
+##### Best F-measure at k = 7
 
 ![png](img/output_78_0.png)
 
 ![png](img/output_79_0.png)
 
-### Best F-measure at k = 9
+##### Best F-measure at k = 9
 
 ![png](img/output_81_0.png)
 
 ![png](img/output_82_0.png)
 
-### Best F-measure at k = 11
+##### Best F-measure at k = 11
 
 ![png](img/output_84_0.png)
 
 ![png](img/output_85_0.png)
 
-### Worst entropy at k = 3
+##### Worst Entropy at k = 3
 
 ![png](img/output_87_0.png)
 
 ![png](img/output_88_0.png)
 
-### Worst entropy at k = 5
+##### Worst Entropy at k = 5
 
 ![png](img/output_90_0.png)
 
 ![png](img/output_91_0.png)
 
-### Worst entropy at k = 7
+##### Worst Entropy at k = 7
 
 ![png](img/output_93_0.png)
 
 ![png](img/output_94_0.png)
 
-### Worst entropy at k = 9
+##### Worst Entropy at k = 9
 
 ![png](img/output_96_0.png)
 
 ![png](img/output_97_0.png)
 
-### Worst entropy at k = 11
+##### Worst Entropy at k = 11
 
 ![png](img/output_99_0.png)
 
 ![png](img/output_100_0.png)
 
-### Worst F-measure at k = 3
+##### Worst F-measure at k = 3
 
 ![png](img/output_102_0.png)
 
 ![png](img/output_103_0.png)
 
-### Worst F-measure at k = 5
+##### Worst F-measure at k = 5
 
 ![png](img/output_105_0.png)
 
 ![png](img/output_106_0.png)
 
-### Worst F-measure at k = 7
+##### Worst F-measure at k = 7
 
 ![png](img/output_108_0.png)
 
 ![png](img/output_109_0.png)
 
-### Worst F-measure at k = 9
+##### Worst F-measure at k = 9
 
 ![png](img/output_111_0.png)
 
 ![png](img/output_112_0.png)
 
-### Worst F-measure at k = 11
+##### Worst F-measure at k = 11
 
 ![png](img/output_114_0.png)
 
