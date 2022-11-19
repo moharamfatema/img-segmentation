@@ -404,6 +404,101 @@ def conditional_entropy_all(y_true,y_pred):
 K-means image segmentation for the whole dataset results in an average F-measure of
 _0.17_, and an average conditional entropy of _19.22_.
 
+![measures][measures]
+
+```text
+ k = 0
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.2525853098617235
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 3
+	 	 	 F-measure = 0.15021576914521445
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 4
+	 	 	 F-measure = 0.33564332844263234
+	 	 	 Conditional Entropy = 0.9737068304661309
+Average F-measure = 0.3216321296922686
+Average Conditional Entropy = 0.19474136609322618
+	 k = 1
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.3205371409375046
+	 	 	 Conditional Entropy = 0.719605792256861
+	 	  m = 3
+	 	 	 F-measure = 0.19028568684731795
+	 	 	 Conditional Entropy = 1.1993429870947685
+	 	  m = 4
+	 	 	 F-measure = 0.31742638667218886
+	 	 	 Conditional Entropy = 0.719605792256861
+Average F-measure = 0.3395930910937569
+Average Conditional Entropy = 0.527710914321698
+	 k = 2
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.3121401830291917
+	 	 	 Conditional Entropy = 0.6095938176932034
+	 	  m = 3
+	 	 	 F-measure = 0.18523122755081106
+	 	 	 Conditional Entropy = 1.015989696155339
+	 	  m = 4
+	 	 	 F-measure = 0.30912005852838215
+	 	 	 Conditional Entropy = 0.6095938176932034
+Average F-measure = 0.33524154202403156
+Average Conditional Entropy = 0.44703546630834917
+	 k = 3
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.3063056639012983
+	 	 	 Conditional Entropy = 0.5398880869119573
+	 	  m = 3
+	 	 	 F-measure = 0.18181091089867485
+	 	 	 Conditional Entropy = 0.8998134781865957
+	 	  m = 4
+	 	 	 F-measure = 0.3032836940049894
+	 	 	 Conditional Entropy = 0.5398880869119573
+Average F-measure = 0.33222330196334704
+Average Conditional Entropy = 0.3959179304021021
+	 k = 4
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.3035426036150093
+	 	 	 Conditional Entropy = 0.513729515803707
+	 	  m = 3
+	 	 	 F-measure = 0.1802423965614268
+	 	 	 Conditional Entropy = 0.8562158596728449
+	 	  m = 4
+	 	 	 F-measure = 0.30055399767689167
+	 	 	 Conditional Entropy = 0.513729515803707
+Average F-measure = 0.3308110477730201
+Average Conditional Entropy = 0.37673497825605173
+```
+
 The following are the average results for each number of clusters per image.
 
 ### F-measure
@@ -708,6 +803,101 @@ Then, we run the same code but pass a parameter `position = True` to the previou
 
 K-means image segmentation for the whole dataset results in an average F-measure of
 _0.22_, and an average conditional entropy of _23.09_.
+
+![measures-pos][measures]
+
+```text
+ k = 0
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.2525853098617235
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 3
+	 	 	 F-measure = 0.15021576914521445
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 4
+	 	 	 F-measure = 0.4284766412196494
+	 	 	 Conditional Entropy = 2.0176769805662103
+Average F-measure = 0.340198792247672
+Average Conditional Entropy = 0.4035353961132421
+	 k = 1
+	 	  m = 0
+	 	 	 F-measure = 0.4348674289562684
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 1
+	 	 	 F-measure = 0.4348488120555046
+	 	 	 Conditional Entropy = 0.0
+	 	  m = 2
+	 	 	 F-measure = 0.6291311929128804
+	 	 	 Conditional Entropy = 2.403090506846218
+	 	  m = 3
+	 	 	 F-measure = 0.3791047687736945
+	 	 	 Conditional Entropy = 4.005150844743697
+	 	  m = 4
+	 	 	 F-measure = 0.6331449872703923
+	 	 	 Conditional Entropy = 2.403090506846218
+Average F-measure = 0.502219437993748
+Average Conditional Entropy = 1.7622663716872267
+	 k = 2
+	 	  m = 0
+	 	 	 F-measure = 0.6702526611182309
+	 	 	 Conditional Entropy = 0.7948745570183104
+	 	  m = 1
+	 	 	 F-measure = 0.6701310583901864
+	 	 	 Conditional Entropy = 0.7948745570183104
+	 	  m = 2
+	 	 	 F-measure = 0.7425348899898033
+	 	 	 Conditional Entropy = 2.7928049253454064
+	 	  m = 3
+	 	 	 F-measure = 0.4471087471534692
+	 	 	 Conditional Entropy = 4.654674875575678
+	 	  m = 4
+	 	 	 F-measure = 0.7467258601490089
+	 	 	 Conditional Entropy = 2.7928049253454064
+Average F-measure = 0.6553506433601398
+Average Conditional Entropy = 2.3660067680606223
+	 k = 3
+	 	  m = 0
+	 	 	 F-measure = 0.7137964902778346
+	 	 	 Conditional Entropy = 1.1520831195260315
+	 	  m = 1
+	 	 	 F-measure = 0.7123294287159965
+	 	 	 Conditional Entropy = 1.1520831195260315
+	 	  m = 2
+	 	 	 F-measure = 0.731551851087162
+	 	 	 Conditional Entropy = 2.7841198623958956
+	 	  m = 3
+	 	 	 F-measure = 0.43888631910790465
+	 	 	 Conditional Entropy = 4.640199770659827
+	 	  m = 4
+	 	 	 F-measure = 0.7332403500496202
+	 	 	 Conditional Entropy = 2.7841198623958956
+Average F-measure = 0.6659608878477037
+Average Conditional Entropy = 2.5025211469007362
+	 k = 4
+	 	  m = 0
+	 	 	 F-measure = 0.6293791901603694
+	 	 	 Conditional Entropy = 0.7357545498724573
+	 	  m = 1
+	 	 	 F-measure = 0.6285437186086814
+	 	 	 Conditional Entropy = 0.7357545498724573
+	 	  m = 2
+	 	 	 F-measure = 0.7121907855506712
+	 	 	 Conditional Entropy = 2.6663618227633594
+	 	  m = 3
+	 	 	 F-measure = 0.42718057907509754
+	 	 	 Conditional Entropy = 4.443936371272265
+	 	  m = 4
+	 	 	 F-measure = 0.7136915299695055
+	 	 	 Conditional Entropy = 2.6663618227633594
+Average F-measure = 0.622197160672865
+Average Conditional Entropy = 2.2496338233087796
+```
 
 The following are the average results for each number of clusters per image.
 
@@ -1025,6 +1215,7 @@ We conclude that
 [maxmatch]: img/maxmatch.jpeg
 [fscore]: img/fscore.jpeg
 [ce-pic]: img/ce.jpeg
+[measures]: img/measures.png
 
   <!-- Badges -->
 
