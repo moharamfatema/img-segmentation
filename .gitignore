@@ -4,5 +4,3 @@ env
 .prettierrc
 
 **/*.pdf
-**/*.ipynb
-!*pos.ipynb

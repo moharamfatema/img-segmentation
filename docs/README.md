@@ -2,6 +2,18 @@
 
 [![github-badge][github-badge]][github]
 
+K-means:
+
+[![colab-badge][colab-badge]][colab-notebook]
+
+Spatial Encoded Clustering:
+
+[![colab-badge][colab-badge]][colab-notebook-pos]
+
+Spectral Clustering:
+
+[![colab-badge][colab-badge]][colab-notebook-spec]
+
 ## Table of Contents
 
 - [Image Segmentation using clustering methods](#image-segmentation-using-clustering-methods)
@@ -14,36 +26,63 @@
     - [K-means Evaluation](#k-means-evaluation)
   - [Computing F-measure](#computing-f-measure)
   - [Computing Conditional Entropy](#computing-conditional-entropy)
-  - [Results of spatial encoded clustering](#results-of-spatial-encoded-clustering)
+  - [Results of K-means segmentation](#results-of-k-means-segmentation)
     - [F-measure](#f-measure)
       - [Best 5 F scores](#best-5-f-scores)
       - [Worst 5 F scores](#worst-5-f-scores)
     - [Conditional Entropy](#conditional-entropy)
+      - [Best 5 conditional entropy](#best-5-conditional-entropy)
+      - [Worst 5 conditional entropy](#worst-5-conditional-entropy)
+      - [Images](#images)
+    - [Best entropy at k = 3](#best-entropy-at-k--3)
+    - [Best entropy at k = 5](#best-entropy-at-k--5)
+    - [Best entropy at k = 7](#best-entropy-at-k--7)
+    - [Best entropy at k = 9](#best-entropy-at-k--9)
+    - [Best entropy at k = 11](#best-entropy-at-k--11)
+    - [Best F-measure at k = 3](#best-f-measure-at-k--3)
+    - [Best F-measure at k = 5](#best-f-measure-at-k--5)
+    - [Best F-measure at k = 7](#best-f-measure-at-k--7)
+    - [Best F-measure at k = 9](#best-f-measure-at-k--9)
+    - [Best F-measure at k = 11](#best-f-measure-at-k--11)
+    - [Worst entropy at k = 3](#worst-entropy-at-k--3)
+    - [Worst entropy at k = 5](#worst-entropy-at-k--5)
+    - [Worst entropy at k = 7](#worst-entropy-at-k--7)
+    - [Worst entropy at k = 9](#worst-entropy-at-k--9)
+    - [Worst entropy at k = 11](#worst-entropy-at-k--11)
+    - [Worst F-measure at k = 3](#worst-f-measure-at-k--3)
+    - [Worst F-measure at k = 5](#worst-f-measure-at-k--5)
+    - [Worst F-measure at k = 7](#worst-f-measure-at-k--7)
+    - [Worst F-measure at k = 9](#worst-f-measure-at-k--9)
+    - [Worst F-measure at k = 11](#worst-f-measure-at-k--11)
+  - [Encoding Spatial Information](#encoding-spatial-information)
+  - [Results of spatial encoded clustering](#results-of-spatial-encoded-clustering)
+    - [F-measure](#f-measure-1)
+      - [Best 5 F scores](#best-5-f-scores-1)
+      - [Worst 5 F scores](#worst-5-f-scores-1)
+    - [Conditional Entropy](#conditional-entropy-1)
       - [Best 5 Entropies](#best-5-entropies)
       - [Worst 5 Entropies](#worst-5-entropies)
-      - [Images](#images)
-        - [Best Entropy at k = 3](#best-entropy-at-k--3)
-        - [Best Entropy at k = 5](#best-entropy-at-k--5)
-        - [Best Entropy at k = 7](#best-entropy-at-k--7)
-        - [Best Entropy at k = 9](#best-entropy-at-k--9)
-        - [Best Entropy at k = 11](#best-entropy-at-k--11)
-        - [Best F-measure at k = 3](#best-f-measure-at-k--3)
-        - [Best F-measure at k = 5](#best-f-measure-at-k--5)
-        - [Best F-measure at k = 7](#best-f-measure-at-k--7)
-        - [Best F-measure at k = 9](#best-f-measure-at-k--9)
-        - [Best F-measure at k = 11](#best-f-measure-at-k--11)
-        - [Worst Entropy at k = 3](#worst-entropy-at-k--3)
-        - [Worst Entropy at k = 5](#worst-entropy-at-k--5)
-        - [Worst Entropy at k = 7](#worst-entropy-at-k--7)
-        - [Worst Entropy at k = 9](#worst-entropy-at-k--9)
-        - [Worst Entropy at k = 11](#worst-entropy-at-k--11)
-        - [Worst F-measure at k = 3](#worst-f-measure-at-k--3)
-        - [Worst F-measure at k = 5](#worst-f-measure-at-k--5)
-        - [Worst F-measure at k = 7](#worst-f-measure-at-k--7)
-        - [Worst F-measure at k = 9](#worst-f-measure-at-k--9)
-        - [Worst F-measure at k = 11](#worst-f-measure-at-k--11)
-
-[![colab-badge][colab-badge]][colab-notebook]
+      - [Images](#images-1)
+        - [Best Entropy at k = 3](#best-entropy-at-k--3-1)
+        - [Best Entropy at k = 5](#best-entropy-at-k--5-1)
+        - [Best Entropy at k = 7](#best-entropy-at-k--7-1)
+        - [Best Entropy at k = 9](#best-entropy-at-k--9-1)
+        - [Best Entropy at k = 11](#best-entropy-at-k--11-1)
+        - [Best F-measure at k = 3](#best-f-measure-at-k--3-1)
+        - [Best F-measure at k = 5](#best-f-measure-at-k--5-1)
+        - [Best F-measure at k = 7](#best-f-measure-at-k--7-1)
+        - [Best F-measure at k = 9](#best-f-measure-at-k--9-1)
+        - [Best F-measure at k = 11](#best-f-measure-at-k--11-1)
+        - [Worst Entropy at k = 3](#worst-entropy-at-k--3-1)
+        - [Worst Entropy at k = 5](#worst-entropy-at-k--5-1)
+        - [Worst Entropy at k = 7](#worst-entropy-at-k--7-1)
+        - [Worst Entropy at k = 9](#worst-entropy-at-k--9-1)
+        - [Worst Entropy at k = 11](#worst-entropy-at-k--11-1)
+        - [Worst F-measure at k = 3](#worst-f-measure-at-k--3-1)
+        - [Worst F-measure at k = 5](#worst-f-measure-at-k--5-1)
+        - [Worst F-measure at k = 7](#worst-f-measure-at-k--7-1)
+        - [Worst F-measure at k = 9](#worst-f-measure-at-k--9-1)
+        - [Worst F-measure at k = 11](#worst-f-measure-at-k--11-1)
 
 ## Exploring the dataset
 
@@ -173,6 +212,9 @@ class K_Means:
 The function `fit` takes as input the training data and the maximum number of iterations. It initializes the centroids randomly and then iterates until the centroids don't change or the maximum number of iterations is reached. The function `predict` takes as input the test data and returns the labels of the test data.
 
 We then write a helper function to initialize the classifier, train it and predict the labels of the test data.
+
+> **Note**: The feature vector passed to the classifier is
+> normalized.
 
 The `position` parameter will let us encode spatial information later usin a function `encode_position`. For now, we set the default to `False`.
 
@@ -356,6 +398,311 @@ def conditional_entropy_all(y_true,y_pred):
     return ent, avg / count
 ```
 
+## Results of K-means segmentation
+
+K-means image segmentation for the whole dataset results in an average F-measure of
+_0.17_, and an average conditional entropy of _19.22_.
+
+The following are the average results for each number of clusters per image.
+
+### F-measure
+
+|    k=3     |    k=5     |    k=7     |    k=9     |    k=11    |
+| :--------: | :--------: | :--------: | :--------: | :--------: |
+| 0.20025763 | 0.28088588 | 0.3351878  | 0.31099516 | 0.3576946  |
+| 0.18657969 | 0.22069812 | 0.23361991 | 0.07352786 | 0.25088155 |
+| 0.38035175 | 0.38313246 | 0.42087126 | 0.4729108  | 0.4861679  |
+| 0.16458443 | 0.18857662 | 0.19524966 | 0.24756254 | 0.23253654 |
+| 0.12401793 |  0.159595  | 0.16559213 | 0.17192543 | 0.16877383 |
+| 0.09018138 | 0.1238526  | 0.1532038  | 0.15647346 | 0.17033714 |
+| 0.04474494 | 0.05031892 | 0.05184147 | 0.05435968 | 0.05517804 |
+| 0.2306075  | 0.23111832 | 0.23328309 | 0.2354141  | 0.26479682 |
+| 0.1451505  | 0.16138501 | 0.19304082 | 0.22040507 | 0.23197478 |
+| 0.15834261 | 0.16360234 | 0.1723262  | 0.1727447  | 0.19285347 |
+| 0.08933916 | 0.09769211 | 0.10891172 | 0.10611916 | 0.1171444  |
+| 0.12265041 | 0.14435327 | 0.18741813 | 0.21836892 | 0.22189046 |
+| 0.16909258 | 0.2478994  | 0.30054396 | 0.32505438 | 0.3333766  |
+| 0.2922683  | 0.3229981  | 0.39805973 | 0.40292668 | 0.42046043 |
+| 0.4523246  | 0.46378922 | 0.5177822  | 0.5128231  | 0.47532406 |
+| 0.1002628  | 0.10130657 | 0.1316401  | 0.16427319 | 0.16826373 |
+| 0.07140269 | 0.11781246 | 0.04650906 | 0.16916466 | 0.16960752 |
+| 0.07618336 | 0.08213326 | 0.08933723 | 0.10068691 | 0.11941899 |
+| 0.36105445 | 0.3557749  | 0.38855138 |  0.385377  | 0.38151762 |
+| 0.08122677 | 0.08240915 | 0.08267343 | 0.08321618 | 0.08370406 |
+| 0.32163212 | 0.33959308 | 0.33524156 | 0.3322233  | 0.33081105 |
+| 0.2766552  | 0.33947498 | 0.33375117 | 0.34397143 | 0.35866407 |
+| 0.4062462  | 0.5152262  | 0.5138878  | 0.54857874 | 0.5733429  |
+| 0.03612803 | 0.04962203 | 0.05252462 | 0.06281728 | 0.08295838 |
+| 0.08859985 | 0.15315619 | 0.1572835  | 0.19376616 | 0.19385597 |
+| 0.06897718 | 0.13754703 | 0.14981191 | 0.15528768 | 0.15691857 |
+| 0.07540194 | 0.11944507 | 0.12310492 | 0.13244823 | 0.13359696 |
+| 0.05437353 | 0.05583867 | 0.06232842 | 0.06206353 | 0.06275202 |
+| 0.08712307 | 0.13407435 | 0.13652022 | 0.15281124 | 0.01800344 |
+| 0.05223036 | 0.08422408 | 0.02371506 | 0.0906459  | 0.09518123 |
+| 0.07730724 | 0.09859309 | 0.09701091 | 0.12329083 |  0.139956  |
+| 0.03734065 | 0.04896289 | 0.07533571 | 0.08747492 | 0.10078849 |
+| 0.28952825 | 0.3329621  | 0.38211405 | 0.45856357 | 0.47266695 |
+| 0.1098273  | 0.10422765 | 0.13917318 | 0.15431489 | 0.16250874 |
+| 0.05877764 | 0.07004005 | 0.08636666 | 0.08573294 | 0.09330734 |
+| 0.04463748 | 0.04709329 | 0.04627372 | 0.05455671 | 0.06268217 |
+| 0.10426734 | 0.16009998 | 0.17977865 | 0.17916863 | 0.22323501 |
+| 0.08719385 | 0.10393394 | 0.10938974 | 0.11035658 | 0.1203546  |
+| 0.1400084  | 0.16788283 | 0.09397785 | 0.22299087 | 0.09397785 |
+| 0.05587532 | 0.08555857 | 0.12901199 | 0.16332185 | 0.15198043 |
+| 0.23449524 | 0.43170592 | 0.46149734 | 0.42861274 | 0.5059845  |
+| 0.15689448 | 0.1620063  | 0.21006504 | 0.26719135 | 0.28877753 |
+| 0.06358097 | 0.06787845 | 0.07546274 | 0.08077021 | 0.0916457  |
+|  0.079262  | 0.07772063 | 0.10970882 | 0.11134658 | 0.11718474 |
+| 0.03703913 | 0.0602504  | 0.0664886  | 0.08864692 | 0.08664846 |
+| 0.06904212 | 0.09435088 | 0.11228377 | 0.11353233 | 0.14068593 |
+| 0.07069591 | 0.09339724 | 0.10720582 | 0.12320247 | 0.12955365 |
+| 0.03254929 | 0.0626825  | 0.10384759 | 0.11223634 | 0.11497956 |
+| 0.10636721 | 0.12212301 |  0.199216  | 0.19811356 | 0.19535477 |
+| 0.07409034 | 0.07490093 | 0.07970463 | 0.08314122 | 0.0855166  |
+
+#### Best 5 F scores
+
+|    k=3     |    k=5     |    k=7     |    k=9     |    k=11    |
+| :--------: | :--------: | :--------: | :--------: | :--------: |
+| 0.32163212 | 0.3557749  | 0.39805973 | 0.42861274 | 0.47266695 |
+| 0.36105445 | 0.38313246 | 0.42087126 | 0.45856357 | 0.47532406 |
+| 0.38035175 | 0.43170592 | 0.46149734 | 0.4729108  | 0.4861679  |
+| 0.4062462  | 0.46378922 | 0.5138878  | 0.5128231  | 0.5059845  |
+| 0.4523246  | 0.5152262  | 0.5177822  | 0.54857874 | 0.5733429  |
+
+#### Worst 5 F scores
+
+|    k=3     |    k=5     |    k=7     |    k=9     |    k=11    |
+| :--------: | :--------: | :--------: | :--------: | :--------: |
+| 0.03254929 | 0.04709329 | 0.02371506 | 0.05435968 | 0.01800344 |
+| 0.03612803 | 0.04896289 | 0.04627372 | 0.05455671 | 0.05517804 |
+| 0.03703913 | 0.04962203 | 0.04650906 | 0.06206353 | 0.06268217 |
+| 0.03734065 | 0.05031892 | 0.05184147 | 0.06281728 | 0.06275202 |
+| 0.04463748 | 0.05583867 | 0.05252462 | 0.07352786 | 0.08295838 |
+
+### Conditional Entropy
+
+|    k=3     |    k=5    |    k=7     |    k=9     |    k=11    |
+| :--------: | :-------: | :--------: | :--------: | :--------: |
+| 7.8021955  | 11.559287 | 11.997405  | 11.515504  | 12.499937  |
+|  20.28578  | 19.686829 | 22.996708  |     0.     | 23.263746  |
+|  6.721931  | 6.7564387 | 7.2282066  |  8.302319  |  8.170541  |
+| 13.519988  | 15.442414 | 15.517293  | 16.078154  | 16.044146  |
+| 4.5976825  | 6.9208555 | 7.3957353  |  8.098978  |  8.053152  |
+| 14.8892975 | 16.173506 | 21.106665  | 23.070421  | 25.880991  |
+|  8.844843  | 19.193483 | 15.961545  | 17.271048  | 17.082771  |
+| 4.1861267  | 4.3539343 | 4.3101597  | 4.3262897  |  4.940568  |
+| 2.1134632  | 4.980739  | 7.8639045  |  7.875701  |  7.764428  |
+| 12.834207  | 12.405325 | 13.270289  | 13.272894  | 15.816332  |
+|  4.631545  | 5.754315  | 6.6507545  |  7.000621  | 7.4505277  |
+|  15.24973  | 14.721121 | 17.159227  | 17.721214  |  17.2665   |
+|     0.     | 2.6857648 | 2.1078632  | 2.8097749  |  2.948628  |
+|  4.805286  | 5.698943  |  6.718647  | 6.6759367  | 7.0988555  |
+| 1.1863565  | 1.5779799 |  2.292769  | 2.0857055  | 1.7915416  |
+|  14.26391  | 14.739981 | 17.174652  | 20.108574  |  18.86242  |
+|  5.105105  | 10.473491 |     0.     | 13.200926  | 13.184046  |
+| 16.091352  | 18.388231 | 22.418133  | 24.230227  | 25.675268  |
+|  9.04236   | 7.078466  |  8.559513  | 7.9218826  |  7.566623  |
+|  9.73082   | 9.101799  |  9.124215  |  9.242188  |  9.682703  |
+| 0.19474137 | 0.5277109 | 0.44703546 | 0.39591792 | 0.37673497 |
+| 0.6537997  | 1.5986636 | 1.3441818  | 1.3832912  | 2.8001869  |
+| 2.7443686  | 3.7462988 |  3.525183  | 4.6521196  | 4.8527446  |
+| 21.360386  | 32.63849  |  31.70809  | 43.353714  | 47.603867  |
+| 12.811928  | 21.39184  | 20.713856  | 22.985378  | 22.801863  |
+|  10.47198  | 33.364296 |  34.52009  |  33.65045  |  35.18156  |
+| 26.048761  | 34.604877 |  35.41358  | 35.521263  |  35.49361  |
+|  9.840903  | 11.029086 | 17.294138  | 16.024956  |  16.64937  |
+| 28.770435  | 41.95236  | 42.829327  | 45.438416  |     0.     |
+| 20.519457  | 41.11736  |     0.     | 42.991703  |  45.62508  |
+| 15.586264  | 19.04578  | 20.160913  | 23.553944  | 26.131876  |
+| 40.828648  | 48.269882 | 63.323586  |  67.54087  | 65.439476  |
+| 4.4146047  | 9.740674  |  8.841147  | 12.783245  | 12.676358  |
+| 13.835506  | 13.328714 | 18.059055  |  18.14189  | 18.665144  |
+| 51.161804  | 50.529922 |  59.79702  | 61.942055  | 66.621864  |
+| 16.106413  | 15.19059  | 14.455527  | 19.235922  | 24.114283  |
+| 22.777946  | 28.152227 | 32.646244  | 32.406433  | 34.908134  |
+| 22.274643  | 26.822426 | 27.621635  | 27.714674  | 29.255386  |
+| 7.0072203  | 10.238237 |     0.     | 12.798494  |     0.     |
+|     0.     | 5.9393983 |  8.983727  | 11.210792  | 10.770991  |
+|     0.     | 3.4605477 | 3.8278573  | 2.8823621  |  4.068127  |
+|  0.567996  | 2.0752451 | 4.6766543  |  5.588852  | 5.9141293  |
+| 24.254484  | 34.94908  |  41.22141  |  44.19941  | 49.583378  |
+| 25.558651  | 24.796999 |  29.8727   | 27.882679  | 28.607435  |
+| 41.738293  | 51.914936 | 57.275078  |  71.58237  |  71.70638  |
+| 23.446665  | 28.610594 | 28.167015  | 27.801157  | 32.768917  |
+| 26.106018  | 35.28622  |  38.10354  |  41.43265  | 43.212704  |
+| 26.142607  | 39.84662  | 58.660206  | 59.119404  | 58.597046  |
+| 19.784067  | 22.433004 | 29.035658  | 28.708538  | 27.965158  |
+| 27.403177  | 26.952175 | 29.507982  |  29.5063   | 29.254625  |
+
+#### Best 5 conditional entropy
+
+|    k=3     |    k=5    |    k=7     |    k=9     |    k=11    |
+| :--------: | :-------: | :--------: | :--------: | :--------: |
+|     0.     | 0.5277109 |     0.     |     0.     |     0.     |
+|     0.     | 1.5779799 |     0.     | 0.39591792 |     0.     |
+|     0.     | 1.5986636 |     0.     | 1.3832912  | 0.37673497 |
+| 0.19474137 | 2.0752451 | 0.44703546 | 2.0857055  | 1.7915416  |
+|  0.567996  | 2.6857648 | 1.3441818  | 2.8097749  | 2.8001869  |
+
+#### Worst 5 conditional entropy
+
+|    k=3    |    k=5    |    k=7    |    k=9    |   k=11    |
+| :-------: | :-------: | :-------: | :-------: | :-------: |
+| 27.403177 | 41.11736  | 42.829327 | 45.438416 | 49.583378 |
+| 28.770435 | 41.95236  | 57.275078 | 59.119404 | 58.597046 |
+| 40.828648 | 48.269882 | 58.660206 | 61.942055 | 65.439476 |
+| 41.738293 | 50.529922 | 59.79702  | 67.54087  | 66.621864 |
+| 51.161804 | 51.914936 | 63.323586 | 71.58237  | 71.70638  |
+
+> **Note:**
+>
+> The entropies of value 0 could be a result of maxmatching a
+> number of labels that is larger than the number of clusters K,
+> where multiple labels are assigned to the same cluster.
+
+<!-- TODO -->
+
+#### Images
+
+### Best entropy at k = 3
+
+![png](img/kmeans/output_57_0.png)
+
+![png](img/kmeans/output_58_0.png)
+
+### Best entropy at k = 5
+
+![png](img/kmeans/output_60_0.png)
+
+![png](img/kmeans/output_61_0.png)
+
+### Best entropy at k = 7
+
+![png](img/kmeans/output_63_0.png)
+
+![png](img/kmeans/output_64_0.png)
+
+### Best entropy at k = 9
+
+![png](img/kmeans/output_66_0.png)
+
+![png](img/kmeans/output_67_0.png)
+
+### Best entropy at k = 11
+
+![png](img/kmeans/output_69_0.png)
+
+![png](img/kmeans/output_70_0.png)
+
+### Best F-measure at k = 3
+
+![png](img/kmeans/output_72_0.png)
+
+![png](img/kmeans/output_73_0.png)
+
+### Best F-measure at k = 5
+
+![png](img/kmeans/output_75_0.png)
+
+![png](img/kmeans/output_76_0.png)
+
+### Best F-measure at k = 7
+
+![png](img/kmeans/output_78_0.png)
+
+![png](img/kmeans/output_79_0.png)
+
+### Best F-measure at k = 9
+
+![png](img/kmeans/output_81_0.png)
+
+![png](img/kmeans/output_82_0.png)
+
+### Best F-measure at k = 11
+
+![png](img/kmeans/output_84_0.png)
+
+![png](img/kmeans/output_85_0.png)
+
+### Worst entropy at k = 3
+
+![png](img/kmeans/output_87_0.png)
+
+![png](img/kmeans/output_88_0.png)
+
+### Worst entropy at k = 5
+
+![png](img/kmeans/output_90_0.png)
+
+![png](img/kmeans/output_91_0.png)
+
+### Worst entropy at k = 7
+
+![png](img/kmeans/output_93_0.png)
+
+![png](img/kmeans/output_94_0.png)
+
+### Worst entropy at k = 9
+
+![png](img/kmeans/output_96_0.png)
+
+![png](img/kmeans/output_97_0.png)
+
+### Worst entropy at k = 11
+
+![png](img/kmeans/output_99_0.png)
+
+![png](img/kmeans/output_100_0.png)
+
+### Worst F-measure at k = 3
+
+![png](img/kmeans/output_102_0.png)
+
+![png](img/kmeans/output_103_0.png)
+
+### Worst F-measure at k = 5
+
+![png](img/kmeans/output_105_0.png)
+
+![png](img/kmeans/output_106_0.png)
+
+### Worst F-measure at k = 7
+
+![png](img/kmeans/output_108_0.png)
+
+![png](img/kmeans/output_109_0.png)
+
+### Worst F-measure at k = 9
+
+![png](img/kmeans/output_111_0.png)
+
+![png](img/kmeans/output_112_0.png)
+
+### Worst F-measure at k = 11
+
+![png](img/kmeans/output_114_0.png)
+
+![png](img/kmeans/output_115_0.png)
+
+## Encoding Spatial Information
+
+We perform the previous steps again, but this time we encode the pixel locations `(x,y)` in the feature vector. We normalize the pixel locations and give them a weight of `0.6`.
+
+```python
+def encode_position(img):
+  img_indices = np.zeros((img.shape[:-1]+(5,)))
+  img_indices[:,:,:3] = img
+
+  row,col = np.indices((img.shape[:2]))
+  img_indices[:,:,3] = row / img.shape[0] / 1.5
+  img_indices[:,:,4] = col / img.shape[1] / 1.5
+
+  return img_indices
+```
+
+Then, we run the same code but pass a parameter `position = True` to the previously mentioned step of classifying.
+
 ## Results of spatial encoded clustering
 
 K-means image segmentation for the whole dataset results in an average F-measure of
@@ -438,6 +785,11 @@ The following are the average results for each number of clusters per image.
 | 0.04963747 | 0.06823841 | 0.07827622 | 0.09595703 | 0.12716492 |
 | 0.05279624 | 0.07384573 | 0.08712956 | 0.10450273 | 0.13622504 |
 
+> **Note**:
+>
+> `k > 5` produce _better_ F scores than `K <= 5` in
+> general.
+
 ### Conditional Entropy
 
 |    k=3    |    k=5    |    k=7     |    k=9    |   k=11    |
@@ -518,9 +870,6 @@ The following are the average results for each number of clusters per image.
 > The entropies of value 0 could be a result of maxmatching a
 > number of labels that is larger than the number of clusters K,
 > where multiple labels are assigned to the same cluster.
->
-> Mark that `k > 5` produce _better_ F scores than `K <= 5` in
-> general.
 
 #### Images
 
@@ -672,3 +1021,5 @@ The following are the average results for each number of clusters per image.
 
 [github]: http://github.com/moharamfatema/img-segmentation
 [colab-notebook]: https://colab.research.google.com/github/moharam-fatema/img-segmentation/blob/master/img-segmentation.ipynb
+[colab-notebook-pos]: https://colab.research.google.com/github/moharam-fatema/img-segmentation/blob/master/img-segmentation-pos.ipynb
+[colab-notebook-spec]: https://colab.research.google.com/github/moharam-fatema/img-segmentation/blob/master/img-segmentation-spec.ipynb
