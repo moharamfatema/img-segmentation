@@ -83,6 +83,7 @@ Spectral Clustering:
         - [Worst F-measure at k = 7](#worst-f-measure-at-k--7-1)
         - [Worst F-measure at k = 9](#worst-f-measure-at-k--9-1)
         - [Worst F-measure at k = 11](#worst-f-measure-at-k--11-1)
+  - [Conclusion](#conclusion)
 
 ## Exploring the dataset
 
@@ -867,8 +868,8 @@ The following are the average results for each number of clusters per image.
 
 > **Note:**
 >
-> The entropies of value 0 could be a result of maxmatching a
-> number of labels that is larger than the number of clusters K,
+> The entropies of value `0` could be a result of maxmatching a
+> number of labels that is larger than the number of clusters `K`,
 > where multiple labels are assigned to the same cluster.
 
 #### Images
@@ -992,6 +993,19 @@ The following are the average results for each number of clusters per image.
 ![png](img/output_114_0.png)
 
 ![png](img/output_115_0.png)
+
+## Conclusion
+
+|       metric        | k-means | spatial k-means | spectral clustering |
+| :-----------------: | :-----: | :-------------: | :-----------------: |
+|      F-measure      |  0.17   |      0.22       |       0.0000        |
+| Conditional Entropy |  19.22  |      23.09      |       0.0000        |
+
+We conclude that
+
+1. Conditional entropy is not a good metric for evaluating image segmentation.
+2. According to the F-measure, the spatial k-means algorithm performs better than the k-means algorithm.
+3. For spatial k-means, according to F-measure the best values for `K` are greater than `5`.
 
 <!-- References -->
 
