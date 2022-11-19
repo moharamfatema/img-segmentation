@@ -1,4 +1,8 @@
 env
+.ipynb_checkpoints
+
+.prettierrc
+
 **/*.pdf
 **/*.ipynb
-
+!*pos.ipynb
