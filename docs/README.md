@@ -2,6 +2,14 @@
 
 [![github-badge][github-badge]][github]
 
+## Authors
+
+| Name           | ID   |
+| -------------- | ---- |
+| Fatema Moharam | 6655 |
+| Aya Naga       | 6376 |
+| Mariam Bardesy | 6200 |
+
 K-means:
 
 [![colab-badge][colab-badge]][colab-notebook]
