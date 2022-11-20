@@ -1314,21 +1314,21 @@ kmeans is better than normalized cut in image segmentastion
 [fscore]: img/fscore.jpeg
 [ce-pic]: img/ce.jpeg
 [measures]: img/measures.png
-[K0]:img/K0.png
-[K1]:img/K1.png
-[K2]:img/K2.png
-[K3]:img/K3.png
-[K4]:img/K4.png
-[n0]:img/n0.png
-[n1]:img/n1.png
-[n2]:img/n2.png
-[n3]:img/n3.png
-[n4]:img/n4.png
-[kn0]:img/kn0.png
-[kn1]:img/kn1.png
-[kn2]:img/kn2.png
-[kn3]:img/kn3.png
-[kn4]:img/kn4.png
+[K0]:img/K0.PNG
+[K1]:img/K1.PNG
+[K2]:img/K2.PNG
+[K3]:img/K3.PNG
+[K4]:img/K4.PNG
+[n0]:img/n0.PNG
+[n1]:img/n1.PNG
+[n2]:img/n2.PNG
+[n3]:img/n3.PNG
+[n4]:img/n4.PNG
+[kn0]:img/kn0.PNG
+[kn1]:img/kn1.PNG
+[kn2]:img/kn2.PNG
+[kn3]:img/kn3.PNG
+[kn4]:img/kn4.PNG
 
   <!-- Badges -->
 
