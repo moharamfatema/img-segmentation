@@ -1204,7 +1204,9 @@ We conclude that
 1. Conditional entropy is not a good metric for evaluating image segmentation.
 2. According to the F-measure, the spatial k-means algorithm performs better than the k-means algorithm.
 3. For spatial k-means, according to F-measure the best values for `K` are greater than `5`.
-##Big picture
+
+## Big picture
+
 a)
 ```python
 for i in range(0,5):
@@ -1213,7 +1215,19 @@ for i in range(0,5):
  disp_img_truth(x_test[i],y_test[i],edges=False)
  print("ground truth of image "+str(i))
 ```
+
+![K0][K0]
+
+![K1][K1]
+
+![K2][K2]
+
+![K3][K3]
+
+![K4][K4]
+
 the model can differentiate better when the image has less features and more contrast between the colors ,also in plane image since it has more details the model couldn't differentiate it as an object but it recognized some details and edges.
+
 b)
 ```python
 from sklearn.cluster import SpectralClustering
@@ -1244,7 +1258,20 @@ def Ncut(img):
 	 print("ground truth of image "+str(i))
 
 ```
+
+![n0][n0]
+
+![n1][n1]
+
+![n2][n2]
+
+![n3][n3]
+
+![n4][n4]
+
 normalized cut generates bad results when features have similar colors or blended in
+
+
 c)
 ```python
 for i in range(0,5):
@@ -1256,6 +1283,17 @@ for i in range(0,5):
   plt.title("normalized cut for image "+str(i))
   plt.figure()
 ```
+
+![kn0][kn0]
+
+![kn1][kn1]
+
+![kn2][kn2]
+
+![kn3][kn3]
+
+![kn4][kn4]
+
 kmeans is better than normalized cut in image segmentastion
 <!-- References -->
 
@@ -1276,6 +1314,21 @@ kmeans is better than normalized cut in image segmentastion
 [fscore]: img/fscore.jpeg
 [ce-pic]: img/ce.jpeg
 [measures]: img/measures.png
+[K0]:img/K0.png
+[K1]:img/K1.png
+[K2]:img/K2.png
+[K3]:img/K3.png
+[K4]:img/K4.png
+[n0]:img/n0.png
+[n1]:img/n1.png
+[n2]:img/n2.png
+[n3]:img/n3.png
+[n4]:img/n4.png
+[kn0]:img/kn0.png
+[kn1]:img/kn1.png
+[kn2]:img/kn2.png
+[kn3]:img/kn3.png
+[kn4]:img/kn4.png
 
   <!-- Badges -->
 
