@@ -1204,7 +1204,59 @@ We conclude that
 1. Conditional entropy is not a good metric for evaluating image segmentation.
 2. According to the F-measure, the spatial k-means algorithm performs better than the k-means algorithm.
 3. For spatial k-means, according to F-measure the best values for `K` are greater than `5`.
+##Big picture
+a)
+```python
+for i in range(0,5):
+ plt.imshow(k_means(5,x_test[i],position = True))
+ print("kmean of image "+str(i))
+ disp_img_truth(x_test[i],y_test[i],edges=False)
+ print("ground truth of image "+str(i))
+```
+the model can differentiate better when the image has less features and more contrast between the colors ,also in plane image since it has more details the model couldn't differentiate it as an object but it recognized some details and edges.
+b)
+```python
+from sklearn.cluster import SpectralClustering
+from skimage.transform import resize
+import scipy
+def Ncut(img):
+    #img = resize(img, 0.3) / 255
+    n = img.shape[0]
+    m = img.shape[1]
+    img = img.reshape(-1, img.shape[-1])
+    labels = SpectralClustering(n_clusters=5,
+                                  affinity='nearest_neighbors',
+                                  gamma=1,
+                                  n_neighbors=5,
+                                  eigen_solver='amg',n_components=None
+                                  ).fit_predict(img)
+    labels = labels.reshape(n,m)
 
+
+    plt.figure(figsize=(12, 12))
+    plt.axis('off')
+    plt.imshow(labels)
+ for i in range(0,5):
+	 Ncut(x_test[i])
+	 plt.title("normalized cut for image "+str(i))
+	 plt.figure()
+	 disp_img_truth(x_test[i],y_test[i],edges=False)
+	 print("ground truth of image "+str(i))
+
+```
+normalized cut generates bad results when features have similar colors or blended in
+c)
+```python
+for i in range(0,5):
+  plt.imshow(k_means(5,x_test[i],position = True))
+  plt.title("Kmeans for image "+str(i))
+  plt.figure()
+  t=x_test[i]/255
+  Ncut(t)
+  plt.title("normalized cut for image "+str(i))
+  plt.figure()
+```
+kmeans is better than normalized cut in image segmentastion
 <!-- References -->
 
   <!-- Links -->
