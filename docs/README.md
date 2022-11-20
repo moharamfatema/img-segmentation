@@ -1369,4 +1369,4 @@ for i in range(0,5):
 [github]: http://github.com/moharamfatema/img-segmentation
 [colab-notebook]: https://colab.research.google.com/github/moharamfatema/img-segmentation/blob/main/img_segmentation.ipynb
 [colab-notebook-pos]: https://colab.research.google.com/github/moharamfatema/img-segmentation/blob/main/img_segmentation_pos.ipynb
-[colab-notebook-spec]: https://colab.research.google.com/github/moharamfatema/img-segmentation/blob/main/spectral-clustering.ipynb
+[colab-notebook-spec]: https://colab.research.google.com/github/moharamfatema/img-segmentation/blob/main/spectral-clustering1.ipynb
