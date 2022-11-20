@@ -1295,6 +1295,30 @@ for i in range(0,5):
 ![kn4][kn4]
 
 kmeans is better than normalized cut in image segmentastion
+
+## Extra
+a) spatial vs non spatial
+```python
+for i in range(0,5):
+ plt.imshow(k_means(5,x_test[i],position = True))
+ plt.title("Kmeans for spatial image "+str(i))
+ plt.figure()
+ plt.imshow(k_means(5,x_test[i],position = False))
+ plt.title("Kmeans for non spatial image "+str(i))
+ plt.figure()
+ ```
+ 
+![ks0][ks0]
+
+![ks1][ks1]
+
+![ks2][ks2]
+
+![ks3][ks3]
+
+![ks4][ks4]
+
+
 <!-- References -->
 
   <!-- Links -->
@@ -1329,6 +1353,11 @@ kmeans is better than normalized cut in image segmentastion
 [kn2]:img/kn2.PNG
 [kn3]:img/kn3.PNG
 [kn4]:img/kn4.PNG
+[ks0]:img/ks0.PNG
+[ks1]:img/ks1.PNG
+[ks2]:img/ks2.PNG
+[ks3]:img/ks3.PNG
+[ks4]:img/ks4.PNG
 
   <!-- Badges -->
 
